@@ -1,0 +1,93 @@
+<html>
+<head><title>Sec-35 RegForm</title>
+<script>
+function validate()
+{
+    var fname=document.reg_form.fname;
+     var lname=document.reg_form.lname;
+    var address=document.reg_form.address;
+     var gender=document.reg_form.gender;
+     var email=document.reg_form.email;
+      var mobile=document.reg_form.mobile;
+      var course=document.reg_form.course;
+    if(fname.value.length<=0)
+    {
+       alert("First name is required");
+        fname.focus();
+        return false;
+      }
+     if(lname.value.length<=0)
+     {
+     alert("Last name is required");
+      lname.focus();
+     return false;
+      }
+ if(address.value.length<=0)
+    {
+       alert("address is required");
+        address.focus();
+        return false;
+      }
+if(gender.value.length<=0)
+    {
+       alert("Gender must be selected");
+        gender.focus();
+        return false;
+      }
+      if(course.value=="Select course")
+{
+       alert("Course must be selected");
+        course.focus();
+        return false;
+      }
+}
+</script>
+</head>
+<body>
+<center><h1>Registration Form</h1></center>
+<form method="" name="reg_form" onsubmit="return validate()">
+<table align="center" border="0">
+<tr>
+<td><b>Enter First Name :</b></td>
+<td><input type="text" name="fname" placeholder="First name"></td>
+</tr>
+<tr>
+<td><b>Enter Last name :</b></td>
+<td><input type="text" name="lname" placeholder="Last name"></td>
+</tr>
+<tr>
+<td><b>Address :</b></td>
+<td><input type="textarea" name="address"></td>
+</tr>
+<tr>
+<td><b>Gender</b></td>
+<td><input type="radio" name="gender" value="male">Male
+    <input type="radio" name="gender" value="female">Female
+</td>
+</tr>
+<tr>
+<td><b>Email :</b></td>
+<td><input type="email" name="email" placeholder="example@gmail.com"></td>
+</tr>
+<tr>
+<tr>
+<td><b>Mobile :</b></td>
+<td><input type="mobile" name="mobile" placeholder="Mobile number"></td>
+</tr>
+<tr>
+<td><b>course :</b></td>
+<td><select name="course">
+         <option value="select course">Select course
+        <option value="HTML">HTML
+       <option value="CSS">CSS
+         <option value="Java Script">Java Script
+  </select>
+<tr>
+
+<td><input style="width:100px" type="submit" name="submit" value="Submit"></td>
+<td><input style="width:100px" type="reset" name="reset" value="Reset"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
